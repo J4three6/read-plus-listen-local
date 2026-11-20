@@ -1,0 +1,34 @@
+# Read+Listen local
+
+Generate a time map between an EPUB and an M4B, then read the EPUB as the audiobook plays. The project contains two standalone apps.
+
+| Component | Purpose |
+| --- | --- |
+| [Read & Listen Sync Engine](engine/) | Transcribes the audiobook locally with faster-whisper and exports a versioned `*.sync-v2.json` sidecar. |
+| [Read & Listen Player](player/) | Loads an EPUB, M4B and sidecar in a local browser player. It follows the narrator, highlights the current word and sentence, and lets you seek by selecting text. |
+
+## Try the player
+
+Install Python 3.11 or 3.12. From the repository root:
+
+```powershell
+py -3.12 -m venv player\.venv
+player\.venv\Scripts\python.exe -m pip install -r player\requirements.txt
+player\Iniciar_Reproductor.bat
+```
+
+Load the three files from [the synthetic example](examples/). The MP4 contains audible tones in place of speech so you can verify the timing and seeking. The player uses temporary disk space for the files you load and listens on your own computer.
+
+## Generate a sidecar
+
+Use the engine included in the current version of this project to generate a sidecar.
+
+## Integrate with another player
+
+See the [interoperability specification](docs/sync-format.md) and the [example sidecar](examples/example.sync-v2.json). A player can implement this format directly. It can also add adapters for other timing formats. Producers can generate compatible files as long as they use the same timing units, section identifiers and word coordinates.
+
+The current format has no dependency on a particular account, network service or speech recognition model. It is tied to the exact EPUB and audio editions that were aligned. The source code is licensed under [GPL-3.0-only](LICENSE).
+
+## Resumen en español
+
+El motor crea un JSON con los tiempos del EPUB y el M4B. El reproductor carga los tres archivos y resalta el texto al ritmo del audio. Para integrar otro lector, empieza por la [especificación del formato](docs/sync-format.md) y el [ejemplo sintético](examples/).

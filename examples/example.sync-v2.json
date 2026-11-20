@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "2.0-word-alignment",
+  "epub": {
+    "filename": "example.epub",
+    "size": 1841,
+    "sha256": "351362946553c4edcc366f2cce5a8062d1cdf6972da8770d8876cea549623e2c"
+  },
+  "audio": {
+    "filename": "example.m4b",
+    "size": 21733,
+    "sha256": "24a818dce0783b704b52b31487c0d303f2fc505124247d4dbf7100392e0fe85b"
+  },
+  "status": "full_audio_processed",
+  "wordTimingFormat": [
+    "wordIndex",
+    "startMs",
+    "endMs"
+  ],
+  "chapters": [
+    {
+      "epubChapter": 1,
+      "epubHref": "sample.xhtml",
+      "epubItemId": "sample",
+      "epubTitle": "A small lantern",
+      "epubSpineIndex": 1,
+      "epubWordCount": 10,
+      "audioStartMs": 100,
+      "audioEndMs": 3960,
+      "wordTimings": [
+        [
+          0,
+          100,
+          360
+        ],
+        [
+          1,
+          500,
+          760
+        ],
+        [
+          2,
+          900,
+          1160
+        ],
+        [
+          4,
+          1700,
+          1960
+        ],
+        [
+          5,
+          2100,
+          2360
+        ],
+        [
+          6,
+          2500,
+          2760
+        ],
+        [
+          7,
+          2900,
+          3160
+        ],
+        [
+          8,
+          3300,
+          3560
+        ],
+        [
+          9,
+          3700,
+          3960
+        ]
+      ]
+    }
+  ]
+}
