@@ -4,7 +4,7 @@ Run Whisper locally to align an EPUB with its M4B audiobook and generate a JSON 
 
 | Component | Purpose |
 | --- | --- |
-| [Read & Listen Sync Engine](engine/) | Transcribes the audiobook locally with faster-whisper and exports a versioned `*.sync-v2.json` sidecar. |
+| [Read & Listen Sync Engine 3](engine/) | Transcribes the audiobook locally with faster-whisper and exports a versioned `*.sync-v2.json` sidecar. |
 | [Read & Listen Player](player/) | Loads an EPUB, M4B and the sidecar in a local browser player as a test. It follows the narrator, highlights the current word and sentence, and lets you seek by selecting text. |
 
 ## Demo
@@ -27,7 +27,7 @@ Load the [22-second excerpt from Alice's Adventures in Wonderland](examples/) to
 
 ## Generate a sidecar
 
-Use the engine included in the current version of this project to generate a sidecar.
+Install Python 3.11 or 3.12 and put FFmpeg and ffprobe on PATH. On Windows, run `engine\instalar.bat`, then `engine\iniciar.bat`. Select the EPUB and its audio, pick CPU or an available NVIDIA GPU, and click **Synchronize**. Engine 3 runs Whisper locally, detects the narration language automatically, and lets you switch the interface between English and Spanish. See the [engine guide](engine/README.md) for details.
 
 ## Integrate with another player
 
