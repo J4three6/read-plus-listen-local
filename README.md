@@ -7,6 +7,12 @@ Generate a time map between an EPUB and an M4B, then read the EPUB as the audiob
 | [Read & Listen Sync Engine](engine/) | Transcribes the audiobook locally with faster-whisper and exports a versioned `*.sync-v2.json` sidecar. |
 | [Read & Listen Player](player/) | Loads an EPUB, M4B and sidecar in a local browser player. It follows the narrator, highlights the current word and sentence, and lets you seek by selecting text. |
 
+## Demo
+
+A short screen recording of Read+Listen synchronization in the Audiobookshelf fork, using a public-domain EPUB and narration of *Alice's Adventures in Wonderland* by Lewis Carroll.
+
+https://github.com/user-attachments/assets/2fdd22a4-ce25-44be-99bd-df4007065827
+
 ## Try the player
 
 Install Python 3.11 or 3.12. From the repository root:
