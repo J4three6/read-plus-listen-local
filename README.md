@@ -23,7 +23,7 @@ player\.venv\Scripts\python.exe -m pip install -r player\requirements.txt
 player\Iniciar_Reproductor.bat
 ```
 
-Load the three files from [the synthetic example](examples/). The MP4 contains audible tones in place of speech so you can verify the timing and seeking. The player uses temporary disk space for the files you load and listens on your own computer.
+Load the [22-second excerpt from Alice's Adventures in Wonderland](examples/) to try synchronization with real narration. The player uses temporary disk space for the files you load and listens on your own computer.
 
 ## Generate a sidecar
 
@@ -37,4 +37,4 @@ The current format has no dependency on a particular account, network service or
 
 ## Resumen en español
 
-El motor crea un JSON con los tiempos del EPUB y el M4B. El reproductor carga los tres archivos y resalta el texto al ritmo del audio. Para integrar otro lector, empieza por la [especificación del formato](docs/sync-format.md) y el [ejemplo sintético](examples/).
+El motor crea un JSON con los tiempos del EPUB y el M4B. El reproductor carga los tres archivos y resalta el texto al ritmo del audio. Para integrar otro lector, empieza por la [especificación del formato](docs/sync-format.md) y el [ejemplo de Alicia](examples/).

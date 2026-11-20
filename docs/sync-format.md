@@ -25,7 +25,7 @@ Each section has:
 | `audioStartMs`, `audioEndMs` | Optional section playback bounds. They can differ slightly from the first and last visible token timing. |
 | `anchors`, `manualCalibration` | Optional alignment samples and a calibration point. A v2 consumer can use the full `wordTimings` array directly. Older sidecars may only have anchors. |
 
-Unmatched tokens are omitted. An unmatched section can have an empty `wordTimings` array. Validate indices and times, tolerate overlapping word intervals, and do not assume that consecutive rows are consecutive words. For playback, select the most recent word start at or before the player position and check its end before drawing the word highlight. For a tap, seek to the matching row's start time. A strict client can leave a token without a timing unselectable. The sample file includes an unaligned token.
+Unmatched tokens are omitted. An unmatched section can have an empty `wordTimings` array. Validate indices and times, tolerate overlapping word intervals, and do not assume that consecutive rows are consecutive words. For playback, select the most recent word start at or before the player position and check its end before drawing the word highlight. For a tap, seek to the matching row's start time. A strict client can leave a token without a timing unselectable.
 
 ## Word coordinates
 
@@ -35,4 +35,4 @@ Word indices refer to tokens extracted from the EPUB's spine rather than a chara
 - Unsplit sections normally count all body text. For certain narrative chapters, the reference implementation instead counts top-level `p`, `h1`, `h2`, `h3`, `blockquote` and `li` blocks, omits nested duplicates, and rejoins some split uppercase drop caps. The narrative selection and tokenization are implemented in [the reference extractor](../engine/media.py). Compare the extracted count with `epubWordCount` before applying indices.
 - A sentence is a presentation choice calculated by the reader. The sidecar does not store sentence timings.
 
-See [the synthetic sample](../examples/example.sync-v2.json) for the minimal timings and [the player](../player/) for a consumer. New sidecar producers should emit the exact same token coordinates or identify their own incompatible format with a different version identifier.
+See [the Alice in Wonderland example](../examples/example.sync-v2.json) for the minimal timings and [the player](../player/) for a consumer. New sidecar producers should emit the exact same token coordinates or identify their own incompatible format with a different version identifier.
