@@ -1,11 +1,11 @@
 # Read+Listen local
 
-Generate a time map between an EPUB and an M4B, then read the EPUB as the audiobook plays. The project contains two standalone apps.
+Run whisper-ai locally to create a JSON sync file of an EPUB and an M4B, then read the EPUB as the audiobook plays. The project contains two standalone apps.
 
 | Component | Purpose |
 | --- | --- |
 | [Read & Listen Sync Engine](engine/) | Transcribes the audiobook locally with faster-whisper and exports a versioned `*.sync-v2.json` sidecar. |
-| [Read & Listen Player](player/) | Loads an EPUB, M4B and sidecar in a local browser player. It follows the narrator, highlights the current word and sentence, and lets you seek by selecting text. |
+| [Read & Listen Player](player/) | Loads an EPUB, M4B and the sidecar in a local browser player as a test. It follows the narrator, highlights the current word and sentence, and lets you seek by selecting text. |
 
 ## Demo
 
