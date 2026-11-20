@@ -27,7 +27,7 @@ Load the [22-second excerpt from Alice's Adventures in Wonderland](examples/) to
 
 ## Generate a sidecar
 
-Install Python 3.11 or 3.12 and put FFmpeg and ffprobe on PATH. On Windows, run `engine\instalar.bat`, then `engine\iniciar.bat`. Select the EPUB and its audio, pick CPU or an available NVIDIA GPU, and click **Synchronize**. Engine 3 runs Whisper locally, detects the narration language automatically, and lets you switch the interface between English and Spanish. See the [engine guide](engine/README.md) for details.
+Install Python 3.11 or 3.12 and put FFmpeg and ffprobe on PATH. On Windows, run `engine\instalar.bat`, then `engine\iniciar.bat`. Select the EPUB and its audio, pick CPU or an available NVIDIA GPU, and click **Synchronize**. Engine 3 runs Whisper locally, detects the narration language automatically, and lets you switch the interface between English and Spanish. You can also select multiple EPUB and audio files to align matching books in a batch. See the [engine guide](engine/README.md) for details.
 
 ## Integrate with another player
 
