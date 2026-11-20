@@ -1,6 +1,6 @@
 # Read+Listen local
 
-Run whisper-ai locally to create a JSON sync file of an EPUB and an M4B, then read the EPUB as the audiobook plays. The project contains two standalone apps.
+Run Whisper locally to align an EPUB with its M4B audiobook and generate a JSON sync file. Then read along as the audiobook plays. The project includes two standalone apps: a sync engine and a player.
 
 | Component | Purpose |
 | --- | --- |
